@@ -27,14 +27,14 @@ theNav {
 
 .containerVirticals {
     position: relative;
-    width: 4rem;
+    width: auto;
     height: auto;
 }
 
-.SubwayLinesDesign {
+.SubDesign {
     position: absolute;
     left: 2rem;
-    width: auto;
+    width: 4rem;
     height: auto;
 }
 
