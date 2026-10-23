@@ -36,6 +36,7 @@ theNav {
     width: 2rem;
     height: 100vh;
     background-color: rgb(254, 0, 2, 0.65);
+    left: 62vw;
 }
 
 .vertical2 {
@@ -43,7 +44,6 @@ theNav {
     width: 2rem;
     height: 100vh;
     background-color: rgb(31, 72, 255, 0.65);
-    top: 20px;
-    left: 20px;
+    left: 60vw;
     z-index: 10;
 }
