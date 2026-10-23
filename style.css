@@ -24,3 +24,17 @@ theNav {
 .navFade {
     animation: nfade 3s ease-in-out;
 }
+
+.vertical1 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    opacity: 0.5;
+}
+
+.vertical2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    opacity: 0.5;
+}
