@@ -10,36 +10,63 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar sm:navbar-expand bg-1 fg- theNav navFade">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" aria-hidden="true"></span>
-    </button>
-    <dialog class="drawer drawer-end" tabindex="-1" id="navbarNavAltMarkup" aria-labelledby="navbarNavAltMarkupLabel">
-      <div class="drawer-header">
-        <h5 class="drawer-title" id="navbarNavAltMarkupLabel">Menu</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
-      </div>
-      <div class="drawer-body">
-        <div class="nav nav-pills navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">Features</a>
-          <a class="nav-link" href="#">Pricing</a>
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+  <nav class="navbar sm:navbar-expand bg-1 fg-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <dialog class="drawer drawer-end" tabindex="-1" id="navbarNavAltMarkup" aria-labelledby="navbarNavAltMarkupLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navbarNavAltMarkupLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
         </div>
-      </div>
-    </dialog>
-  </div>
-</nav>
+        <div class="drawer-body">
+          <div class="nav nav-pills navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </div>
+        </div>
+      </dialog>
+    </div>
+  </nav>
 
-    <!-- Right Column: Stripes & Photo -->
-    <div class="hero-right">
-      <!-- Vertical Stripes -->
-      <div class="vertical-stripes">
-        <div class="vertical1"></div>
-        <div class="vertical2"></div>
+  <!-- Hero Main Container -->
+  <main class="hero-container">
+    
+    <!-- Left Column: Subway graphic & text block -->
+    <div class="hero-left">
+      <!-- Vignelli Subway-style Graphic (SVG Inline) -->
+      <svg class="subwayLines" viewBox="0 0 300 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g style="mix-blend-mode: multiply; opacity: 0.85;">
+          <!-- Blue line -->
+          <path d="M 20 20 H 90 V 100 H 130 V 220" stroke="#5B7BFA" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Yellow line -->
+          <path d="M 60 20 V 130 H 110 V 270" stroke="#F6C344" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Green line -->
+          <path d="M 120 20 V 100 H 150 V 300" stroke="#4CD985" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Red line -->
+          <path d="M 160 20 H 210 V 70 H 170 V 170 H 110 V 300" stroke="#FF4D4D" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </svg>
+
+      <div class="text-wrapper">
+        <h1 class="hero-title">Massimo Vignelli</h1>
+        <p class="hero-subtitle">A Biography of a Modern Designer</p>
       </div>
+    </div>
+
+    <!-- Right Column: Vertical Stripes & Photo -->
+    <div class="hero-right">
+      <!-- Full-height vertical color stripes -->
+      <div class="vertical-stripes">
+        <div class="stripe red-stripe"></div>
+        <div class="stripe purple-stripe"></div>
+        <div class="stripe blue-stripe"></div>
+      </div>
+      
       <!-- Portrait Photo -->
       <img class="massimo-photo" src="img/Massimo Vignelli Design Website Layout (1).svg" alt="Massimo Vignelli">
     </div>

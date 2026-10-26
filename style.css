@@ -4,26 +4,20 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
   background-color: #ffffff;
 }
 
-/* Navbar Animation & Styling */
-@keyframes nfade {
-  0% { opacity: 0; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
+/* Navbar Styling */
+.navbar {
+  padding: 1.25rem 2rem;
+  background-color: #ffffff;
 }
 
-.navFade {
-  animation: nfade 2s ease-in-out;
-}
-
-.theNav {
-  color: #333;
-  font-weight: 500;
-  padding: 2rem;
+.navbar-brand {
+  font-weight: 600;
+  color: #111111;
 }
 
 /* Main Hero Section Layout */
@@ -31,7 +25,7 @@ body, html {
   display: flex;
   position: relative;
   width: 100vw;
-  height: calc(100vh - 80px); /* Fill remaining height below navbar */
+  height: calc(100vh - 80px); /* Fill screen below navbar */
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
@@ -39,38 +33,40 @@ body, html {
 
 /* Left Section Layout */
 .hero-left {
-  flex: 1;
+  flex: 1.1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 2rem;
+  padding: 0 2rem;
 }
 
 .subwayLines {
-  width: 320px; /* Increased graphic size */
+  width: 280px;
   max-width: 80%;
   height: auto;
   display: block;
+  margin-bottom: 1.5rem;
 }
 
 .text-wrapper {
   text-align: center;
-  margin-top: 1.5rem;
 }
 
 .hero-title {
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-weight: 800;
-  color: #000;
-  margin-bottom: 0.25rem;
-  letter-spacing: -0.5px;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.8px;
+  line-height: 1.1;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  color: #222;
+  font-size: 1.35rem;
+  color: #333333;
   font-weight: 400;
+  margin: 0;
 }
 
 /* Right Section Layout */
@@ -83,42 +79,43 @@ body, html {
   justify-content: flex-start;
 }
 
-/* Full-Height Vertical Stripes */
+/* Vertical Color Stripes (Red, Purple, Light Blue) */
 .vertical-stripes {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 10%;
-  width: 5.5rem;
-  height: 100%;
-}
-
-.vertical1 {
-  position: absolute;
-  top: 0;
   left: 0;
-  width: 3rem;
+  display: flex;
   height: 100%;
-  background-color: rgba(255, 65, 75, 0.85); /* Red/Orange stripe */
 }
 
-.vertical2 {
-  position: absolute;
-  top: 0;
-  left: 2.2rem; /* Overlaps slightly with red stripe to produce purple tint */
-  width: 3rem;
+.stripe {
   height: 100%;
-  background-color: rgba(75, 115, 255, 0.85); /* Blue stripe */
-  mix-blend-mode: multiply;
 }
 
-/* Portrait Image Positioned Relative to Stripes */
+.red-stripe {
+  width: 2.2rem;
+  background-color: #ff4d4d;
+}
+
+.purple-stripe {
+  width: 1.4rem;
+  background-color: #7b4df5;
+}
+
+.blue-stripe {
+  width: 2.2rem;
+  background-color: #5b7bfa;
+}
+
+/* Portrait Image Layout */
 .massimo-photo {
   position: relative;
   z-index: 5;
-  left: calc(10% + 4.5rem); /* Positioned immediately right of the vertical lines */
-  width: 380px;
-  max-width: 50vw;
+  margin-left: 7.5rem;
+  width: 390px;
+  max-width: 45vw;
   height: auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  object-fit: cover;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
 }
