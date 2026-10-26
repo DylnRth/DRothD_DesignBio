@@ -1,109 +1,123 @@
+/* Core Layout & Reset */
 body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  background-color: #ffffff;
 }
 
-theNav {
-    padding: 4rem;
-}
-
-
-
+/* Navbar Animation & Styling */
 @keyframes nfade {
-    0% { opacity: 0;}
-    25% { opacity: 0;}
-    50% { opacity: 0.5;}
-    100% { opacity: 1;}
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
 }
 
 .navFade {
-    animation: nfade 3s ease-in-out;
+  animation: nfade 2s ease-in-out;
 }
 
-.bigContain {
-    display: flex;
-    position: relative;
-    width: 100vw;
-    align-items: center;
+.navbar .nav-link {
+  color: #333;
+  font-weight: 500;
 }
 
-.left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
+/* Main Hero Section Layout */
+.hero-container {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 80px); /* Fill remaining height below navbar */
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
-.text {
-    text-align: center;
-    margin-top: 1.5rem;
-}
-
-.title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #000;
-}
-
-.sub-title {
-    font-size: 1.25rem;
-    color: #222;
-    font-weight: 400;
-}
-
-.subLines {
-    margin-bottom: 2rem;
+/* Left Section Layout */
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem;
 }
 
 .subwayLines {
-    position: static;
-    width: 18rem;
-    height: auto;
-    display: block
+  width: 320px; /* Increased graphic size */
+  max-width: 80%;
+  height: auto;
+  display: block;
 }
 
-.massime_bio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.text-wrapper {
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
-.right {
-    position: relative;
-    width: auto;
-    height: auto;
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.5px;
 }
 
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #222;
+  font-weight: 400;
+}
 
-.massimo1 {
-    position: absolute;
-    top: 1.1rem;
-    left: calc(59vw + 2.5rem);
-    width: 23rem;
-    height: auto;
-    z-index: 11;
+/* Right Section Layout */
+.hero-right {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Full-Height Vertical Stripes */
+.vertical-stripes {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10%;
+  width: 5.5rem;
+  height: 100%;
 }
 
 .vertical1 {
-    position: absolute;
-    width: 2rem;
-    height: 100vh;
-    background-color: rgba(254, 0, 2, 0.65);
-    left: 59vw;
-    z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 100%;
+  background-color: rgba(255, 65, 75, 0.85); /* Red/Orange stripe */
 }
 
 .vertical2 {
-    position: absolute;
-    width: 2rem;
-    height: 100vh;
-    background-color: rgba(31, 72, 255, 0.65);
-    left: calc(59vw + 1.2rem);
-    z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 2.2rem; /* Overlaps slightly with red stripe to produce purple tint */
+  width: 3rem;
+  height: 100%;
+  background-color: rgba(75, 115, 255, 0.85); /* Blue stripe */
+  mix-blend-mode: multiply;
+}
+
+/* Portrait Image Positioned Relative to Stripes */
+.massimo-photo {
+  position: relative;
+  z-index: 5;
+  left: calc(10% + 4.5rem); /* Positioned immediately right of the vertical lines */
+  width: 380px;
+  max-width: 50vw;
+  height: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
