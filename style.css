@@ -20,9 +20,10 @@ body, html {
   animation: nfade 2s ease-in-out;
 }
 
-.navbar .nav-link {
+.theNav {
   color: #333;
   font-weight: 500;
+  padding: 2rem;
 }
 
 /* Main Hero Section Layout */
