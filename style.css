@@ -7,14 +7,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Aligns h1 and p to the left edge */
     height: 100vh;
     width: 50vw;
 }
 
 .massimoH1 {
     font-weight: 900;
-    font-size: large;
+    font-size: medium;
+    margin: 0;
+}
+
+.massimoP {
+    margin: 0;
 }
 
 .rightBanner {
