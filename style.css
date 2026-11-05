@@ -13,8 +13,40 @@
 }
 
 .massimoH1 {
-    font-weight: 800;
-    font-size: 2.25rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    text-align: right;
+    width: 100%;
+    max-width: 320px;
+}
+
+.massimoP {
+    font-size: 1.1rem;
+    margin: 0;
+    text-align: right;
+    width: 100%;
+    max-width: 320px;
+    color: #333;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftBanner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    width: 50vw;
+}
+
+.massimoH1 {
+    font-weight: 500;
+    font-size: 1.5rem;
     margin: 0 0 0.5rem 0;
     text-align: right;
     width: 100%;
@@ -41,7 +73,7 @@
 
 .threeLines {
     position: absolute;
-    left: 1.5rem; /* Pushes the lines further right toward the image */
+    left: 2.5rem;
     top: 0;
     height: 100%;
     width: 4.5rem;
@@ -52,7 +84,7 @@
     position: absolute;
     top: 0;
     height: 100%;
-    width: 2rem; /* Increased width for thicker red and blue bars */
+    width: 2rem;
 }
 
 .red {
@@ -61,15 +93,15 @@
 }
 
 .blue {
-    left: 1.5rem; /* Increased offset so the purple overlap zone is thinner */
+    left: 1.2rem;
     background-color: rgba(60, 100, 255, 0.65);
 }
 
-.imagePlaceholder {
+.bannerImg {
     position: relative;
     z-index: 2;
-    margin-left: 4rem; /* Adjusted so the image box sits flush against the blue edge */
+    margin-left: 4rem;
     width: 320px;
     height: 420px;
-    background-color: #000;
+    object-fit: cover;
 }
