@@ -35,14 +35,18 @@ html {
     border-radius: 50%;
 }
 
-/* Nav links styling */
+/* Nav links layout & base styles */
 .navbar-nav {
     display: flex !important;
     flex-direction: row !important;
     gap: 2rem !important;
 }
 
+.nav-pills .nav-link,
+.nav-pills .nav-link.active,
 .nav-link {
+    border-radius: 0 !important; /* Sharp square edges */
+    background-color: transparent !important;
     font-weight: 600 !important;
     font-size: 0.8rem !important;
     letter-spacing: 0.12em !important;
@@ -53,13 +57,13 @@ html {
     transition: color 0.2s ease;
 }
 
+/* Active & Hover text color */
 .nav-link:hover,
 .nav-link.active {
     color: #111111 !important;
-    background: transparent !important;
 }
 
-/* Red underline indicator on hover/active */
+/* Base underline bar layout */
 .nav-link::after {
     content: '';
     position: absolute;
@@ -67,13 +71,42 @@ html {
     left: 0;
     width: 0%;
     height: 2px;
-    background-color: #ff4349;
     transition: width 0.2s ease;
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
+}
+
+/* Individual accent colors for each link */
+.link-red::after {
+    background-color: #ff4349 !important; /* Matches red line */
+}
+
+.link-purple::after {
+    background-color: #a3539f !important; /* Matches purple overlap */
+}
+
+.link-blue::after {
+    background-color: #557aff !important; /* Matches blue line */
+}
+
+.link-red:hover {
+    color: #ff4349 !important;
+}
+
+.link-purple:hover {
+    color: #a3539f !important;
+}
+
+.link-blue:hover {
+    color: #557aff !important;
+}
+
+/* Body offset for fixed nav */
+body {
+    padding-top: 70px;
 }
 
 /* Push body down so fixed navbar doesn't cover top content */
