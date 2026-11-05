@@ -35,35 +35,41 @@ html {
     border-radius: 50%;
 }
 
-/* Nav links layout & base styles */
+/* Push nav items right & apply spacing */
 .navbar-nav {
     display: flex !important;
     flex-direction: row !important;
-    gap: 2rem !important;
+    gap: 2.5rem !important; /* Increased padding/spacing between buttons */
+    margin-left: auto !important; /* Forces right alignment */
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
 }
 
+/* Nav links - Remove grey background & rounded borders completely */
 .nav-pills .nav-link,
 .nav-pills .nav-link.active,
+.drawer-body,
 .nav-link {
-    border-radius: 0 !important; /* Sharp square edges */
-    background-color: transparent !important;
+    border-radius: 0 !important; /* Removes all pill rounding */
+    background: transparent !important; /* Removes grey fill container background */
     font-weight: 600 !important;
-    font-size: 0.8rem !important;
+    font-size: 0.85rem !important;
     letter-spacing: 0.12em !important;
     text-transform: uppercase;
     color: #666666 !important;
-    padding: 0.25rem 0 !important;
+    padding: 0.5rem 0.75rem !important; /* Extra inner padding */
     position: relative;
     transition: color 0.2s ease;
 }
 
-/* Active & Hover text color */
+/* Hover & Active states */
 .nav-link:hover,
 .nav-link.active {
     color: #111111 !important;
 }
 
-/* Base underline bar layout */
+/* Colored underlines */
 .nav-link::after {
     content: '';
     position: absolute;
@@ -79,17 +85,16 @@ html {
     width: 100%;
 }
 
-/* Individual accent colors for each link */
 .link-red::after {
-    background-color: #ff4349 !important; /* Matches red line */
+    background-color: #ff4349 !important;
 }
 
 .link-purple::after {
-    background-color: #a3539f !important; /* Matches purple overlap */
+    background-color: #a3539f !important;
 }
 
 .link-blue::after {
-    background-color: #557aff !important; /* Matches blue line */
+    background-color: #557aff !important;
 }
 
 .link-red:hover {
@@ -104,12 +109,6 @@ html {
     color: #557aff !important;
 }
 
-/* Body offset for fixed nav */
-body {
-    padding-top: 70px;
-}
-
-/* Push body down so fixed navbar doesn't cover top content */
 body {
     padding-top: 70px;
 }
