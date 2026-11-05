@@ -2,83 +2,83 @@ html {
     scroll-behavior: smooth;
 }
 
-#navbar {
-    width: 100%;
-    height: 70px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
-    display: flex !important;
-    align-items: center !important;
+/* Vignelli-Inspired Bootstrap Navbar Overrides */
+.navbar {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 1rem 3rem !important;
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 1000;
 }
 
-#navContainer {
-    width: 100%;
-    padding: 0 4rem;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-}
-
-#navBrand {
-    font-weight: 800;
-    font-size: 0.95rem;
-    letter-spacing: 0.12em;
-    color: #111111;
-    text-decoration: none;
-    display: inline-flex !important;
-    align-items: center !important;
+/* Brand styling */
+.navbar-brand {
+    font-weight: 800 !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase;
+    color: #111111 !important;
+    display: flex;
+    align-items: center;
     gap: 0.5rem;
 }
 
-#brandDot {
+.navbar-brand::before {
+    content: '';
     display: inline-block;
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     background-color: #ff4349;
     border-radius: 50%;
 }
 
-#navLinks {
+/* Nav links styling */
+.navbar-nav {
     display: flex !important;
     flex-direction: row !important;
-    gap: 2rem;
-    margin: 0;
+    gap: 2rem !important;
 }
 
-#navLinks a {
-    font-weight: 600;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    color: #666666;
-    text-decoration: none;
-    padding: 0.25rem 0;
+.nav-link {
+    font-weight: 600 !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase;
+    color: #666666 !important;
+    padding: 0.25rem 0 !important;
     position: relative;
     transition: color 0.2s ease;
 }
 
-#navLinks a:hover,
-#navLinks a.active {
-    color: #111111;
+.nav-link:hover,
+.nav-link.active {
+    color: #111111 !important;
+    background: transparent !important;
 }
 
-#navLinks a::after {
+/* Red underline indicator on hover/active */
+.nav-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 0%;
     height: 2px;
     background-color: #ff4349;
-    transition: width 0.25s ease;
+    transition: width 0.2s ease;
 }
 
-#navLinks a:hover::after,
-#navLinks a.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
+}
+
+/* Push body down so fixed navbar doesn't cover top content */
+body {
+    padding-top: 70px;
 }
 
 .banner {
