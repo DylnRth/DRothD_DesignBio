@@ -48,21 +48,22 @@
     z-index: 1;
 }
 
-.red, .blue {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 2rem; /* Increased width for thicker red and blue bars */
-}
-
 .red {
-    left: 0;
-    background-color: #fe000265;
+    position: absolute;
+    width: 2rem;
+    height: 100vh;
+    background-color: rgba(254, 0, 2, 0.65);
+    left: 1rem;
+    z-index: 9;
 }
 
 .blue {
-    left: 1.5rem; /* Increased offset so the purple overlap zone is thinner */
-    background-color: #1f48ff65;
+    position: absolute;
+    width: 2rem;
+    height: 100vh;
+    background-color: rgba(31, 72, 255, 0.65);
+    left: calc(2.2rem);
+    z-index: 10;
 }
 
 .imagePlaceholder {
