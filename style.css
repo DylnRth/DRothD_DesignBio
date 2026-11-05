@@ -23,6 +23,8 @@
 }
 
 .massimoH1 {
+    position: absolute;
+    bottom: 1rem;
     font-weight: 900;
     font-size: medium;
     margin: 0;
