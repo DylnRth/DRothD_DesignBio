@@ -16,7 +16,7 @@
     font-weight: 800;
     font-size: 2.25rem;
     margin: 0 0 0.5rem 0;
-    text-align: left;
+    text-align: right;
     width: 100%;
     max-width: 320px;
 }
@@ -24,7 +24,7 @@
 .massimoP {
     font-size: 1.1rem;
     margin: 0;
-    text-align: left;
+    text-align: right;
     width: 100%;
     max-width: 320px;
     color: #333;
@@ -48,22 +48,21 @@
     z-index: 1;
 }
 
-.red {
+.red, .blue {
     position: absolute;
-    width: 2rem;
-    height: 100vh;
-    background-color: rgba(254, 0, 2, 0.65);
-    left: 1rem;
-    z-index: 9;
+    top: 0;
+    height: 100%;
+    width: 2rem; /* Increased width for thicker red and blue bars */
+}
+
+.red {
+    left: 0;
+    background-color: rgba(255, 60, 60, 0.65);
 }
 
 .blue {
-    position: absolute;
-    width: 2rem;
-    height: 100vh;
-    background-color: rgba(31, 72, 255, 0.65);
-    left: calc(2rem);
-    z-index: 10;
+    left: 1.5rem; /* Increased offset so the purple overlap zone is thinner */
+    background-color: rgba(60, 100, 255, 0.65);
 }
 
 .imagePlaceholder {
