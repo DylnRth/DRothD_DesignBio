@@ -7,31 +7,27 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Aligns h1 and p to the left edge */
-    position: relative;
+    align-items: center; 
     height: 100vh;
     width: 50vw;
 }
 
-/* Force left text alignment on child elements */
-.leftBanner h1,
-.leftBanner p {
-    position: absolute;
-    text-align: left !important;
-    left: 50%;
-    margin: 0;
-}
-
 .massimoH1 {
-    position: absolute;
-    bottom: 1rem;
-    font-weight: 900;
-    font-size: medium;
-    margin: 0;
+    font-weight: 800;
+    font-size: 2.25rem;
+    margin: 0 0 0.5rem 0;
+    text-align: left;
+    width: 100%;
+    max-width: 320px;
 }
 
 .massimoP {
+    font-size: 1.1rem;
     margin: 0;
+    text-align: left;
+    width: 100%;
+    max-width: 320px;
+    color: #333;
 }
 
 .rightBanner {
