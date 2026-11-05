@@ -89,12 +89,16 @@
 
 .red {
     left: 0;
-    background-color: rgba(255, 60, 60, 0.65);
+    background-color: #ff4349;
+    opacity: 65%;
+    mix-blend-mode: multiply;
 }
 
 .blue {
     left: 1.2rem;
-    background-color: rgba(60, 100, 255, 0.65);
+    background-color: #557aff;
+    opacity: 65%;
+    mix-blend-mode: multiply;
 }
 
 .bannerImg {
